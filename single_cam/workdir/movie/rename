@@ -1,0 +1,9 @@
+#!/bin/csh
+# rename the local files with a given extension with a sequential number
+ @ m=0
+ foreach i (*.png)
+  set  inum=`echo $m | awk '{ printf "%05.0f", $0 }'`
+  set  fout=$inum.png
+     mv -v $i $fout
+  @  m++
+end

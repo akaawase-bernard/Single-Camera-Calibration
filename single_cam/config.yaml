@@ -1,0 +1,4 @@
+image_directory: 'data/*'
+checkerboard_dims: [8, 9]
+square_size: 1.0
+output_dir: 'workdir'

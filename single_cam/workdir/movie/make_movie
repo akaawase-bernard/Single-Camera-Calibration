@@ -1,0 +1,10 @@
+
+export PATH=$PATH:/opt/ffmpeg/bin
+rsync -vur ../*.png ./
+#
+./rename
+#ffmpeg  -r 100  -i %05d.png -qscale 0 out.mov 
+ffmpeg  -r 2  -i %05d.png -qscale 0 out.mov 
+#changing the first number in the above code will adjust the fps 
+rm -f ./*.png #uncomment this line to clean workspace
+
